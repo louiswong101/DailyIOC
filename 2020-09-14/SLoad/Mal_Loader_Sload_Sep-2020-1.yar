@@ -1,4 +1,4 @@
-rule Mal_Loader_Sload_Sep-2020-1 {
+rule Mal_Loader_Sload_Sep_2020_1 {
    meta:
       description = "Detect SLoad loader"
       author = "Arkbird_SOLG"
@@ -29,7 +29,7 @@ rule Mal_Loader_Sload_Sep-2020-1 {
       $s7 = "New RegExp" fullword ascii
       $s8 = ".[run]" fullword ascii
       $s9 = "fso.FolderExists(" fullword ascii
-      $s10 = { [4-5] 3D [4-5] 66 }
+      $s10 = { 3D [4-5] 66 }
    condition:
        filesize > 2KB and 7 of them
 }
